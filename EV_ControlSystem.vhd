@@ -37,8 +37,7 @@ architecture Behavioral of EV_ControlSystem is
         end if;
         return result;
     end function;
-    
-    
+        
 begin
     process(clk, reset)
     begin
@@ -52,7 +51,7 @@ begin
             efficiency <= calculate_efficiency(battery_voltage, motor_current);
         end if;
     end process;
-    
+            
     motor_output <= speed_control;
     energy_efficiency <= efficiency;
     
